@@ -1,0 +1,78 @@
+.testimonials {
+    // https://codepen.io/feyinway/pen/LjMPgv
+
+    text-align: center;
+    background-color: $lightGrayishBlue;
+
+    &__containter {
+        position: relative;
+        width: 100%;
+        max-width: 1020px;
+        padding: 40px 20px;
+        margin: auto;
+
+        .arrow {
+            svg{
+                display: block;
+                position: absolute;
+                color: #eee;
+                cursor: pointer;
+                font-size: 2em;
+                transition: all .3s ease-in-out;
+                padding: 5px;
+                z-index: 22222222;
+
+                &:before{
+                    cursor: pointer;
+                }
+
+                &:hover{
+                    color: orange;
+                }
+            }
+
+            
+            .right {
+                right: 1rem;
+            }
+            .left {
+                left: 1rem;
+            }
+        }
+
+        .dots {
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            bottom: 60px;
+            left: 0;
+            display: block;
+            z-index: 3333;
+            height: 12px;
+
+            .dot{
+                list-style-type: none;
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: 1px solid #eee;
+                margin: 0 10px;
+                cursor: pointer;
+                -webkit-transition: all .5s ease-in-out;    
+                -ms-transition: all .5s ease-in-out;    
+                -moz-transition: all .5s ease-in-out;    
+                -o-transition: all .5s ease-in-out;    
+                transition: all .5s ease-in-out;
+		        position: relative;
+
+                &:active, &:hover {
+                    background: #ea830e;
+                    border-color: #ea830e;
+                }
+            }
+
+        }
+
+    }
+}

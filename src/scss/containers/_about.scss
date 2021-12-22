@@ -1,0 +1,56 @@
+.about {
+    margin-bottom: 7rem;
+    .about__content {
+
+        @include breakpoint-up(large) {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+          }
+    }
+
+    &__image {
+        position: relative;
+        background-image:linear-gradient(rgba(41, 41, 41, 0.1), rgba(87, 87, 87, 0.5)), url('/public/assets/img/about-img.jpg'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        width: 80%;
+        min-height: 30rem;
+        border-radius: 2rem;
+        overflow: hidden;
+        margin: auto;
+
+        @include breakpoint-up(medium){
+            width: 70%;
+            min-height: 40rem;
+        }
+
+        @include breakpoint-up(large){
+        order: 2;
+        min-height: 50rem;
+        width: 80%;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        width: 90%;
+        margin: auto;
+
+        @include breakpoint-up(large){
+            order: 1;
+            }
+
+        h4{
+            @include breakpoint-up(medium){
+             font-size: $font-med;   
+            }       
+        }
+
+        p{
+            text-align: justify;
+            margin: 3rem
+        } 
+    }   
+}

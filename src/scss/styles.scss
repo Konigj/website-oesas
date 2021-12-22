@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+@import "animations";
+@import "globals";
+// CONTAINERS
+@import "containers/hero";
+@import "containers/feature";
+@import "containers/about";
+@import "containers/testimonials";
+@import "containers/faq";
+// COMPONENTS
+@import "components/header";
+@import "components/footer";
+@import "components/infoButton"

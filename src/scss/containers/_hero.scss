@@ -1,0 +1,50 @@
+.hero {
+    background-color: $veryLightGray;
+    .container {
+      @include breakpoint-up(large){    
+        display: flex;
+        gap: 5rem;
+      }
+    }
+  
+    &__image {
+      position: relative;
+      background-image:linear-gradient(rgba(41, 41, 41, 0.1), rgba(87, 87, 87, 0.5)), url('/public/assets/img/worker.webp'); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 80%;
+      min-height: 30rem;
+      border-radius: 2rem;
+      overflow: hidden;
+      margin: auto;
+
+      @include breakpoint-up(medium){
+        min-height: 40rem;
+    }
+
+      @include breakpoint-up(large){
+        flex: 3;
+        order: 2;
+        max-width: 50rem;
+      }
+    }
+  
+    &__text {
+      margin: auto;
+      text-align: center;
+
+      @include breakpoint-up(large){
+        flex: 2;
+        order: 1;
+      }
+
+      h1, p {
+        @include breakpoint-up(large){
+          text-align: start;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+  
