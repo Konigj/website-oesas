@@ -1,4 +1,5 @@
 .faq{
+    user-select: none;
     .container {
         text-align: center;
         display: grid;
@@ -12,17 +13,14 @@
         .hidden {
             display: none;
         }
-
         .faq__content {
             padding: 45px 0;
         }
-
         .question{
 
             &__section{
                 display: flex;
                 justify-content: space-around;
-
                 input {
                     position: absolute;
                     opacity: 0;
@@ -41,37 +39,31 @@
                     height: 5rem;
                     border-bottom: 0.2rem solid $darkBlue;
                     margin: 2rem 0;
+                    color: $darkBlue;
 
                     @include breakpoint-down(small){
                         font-size: $font-med;
                     
                     }
-
                     &:hover {
                         cursor: pointer;
                         font-weight: 700;
                         color: $darkBlue;
                     }
-    
                     .icon{
                         transition: transform 1s;
                         cursor: pointer;
                     }
-    
                 }
-
-                
-
             }
-            
             &__answer {
                 margin: 1rem;
                 font-size: $font-med;
                 text-align: start;
                 color: black;
+                word-wrap: break-word;
+                word-break: break-word;
             }
-
-
         }
     }
 }

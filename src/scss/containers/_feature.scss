@@ -1,6 +1,7 @@
 .feature {
   background-color: $lightGrayishBlue;
   text-align: center;
+  user-select: none;
 
   &__intro {
     margin: 0 auto 5rem auto;

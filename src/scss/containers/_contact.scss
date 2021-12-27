@@ -1,0 +1,67 @@
+.contact {
+    
+    .container{
+        width: 100%;
+        
+    }
+    
+    &__form {
+        text-align: center;
+    }
+
+    &__information {
+        background-color: $lightGrayishBlue;
+        width: 100%;
+        @include breakpoint-up(medium){
+            display: flex;
+            gap: 3rem;
+        
+        }
+
+        &-card{
+            background-color: white;
+            box-shadow: 0 4px 11px -5px rgb(0 0 0 / 40%);
+            width: 50rem;
+            margin: auto;
+            border-radius: 1rem;
+            
+            
+            h3 {
+                color: $darkBlue;
+                font-weight: 700;
+                padding: 3rem 3rem 2rem;
+                font-size: 2.4rem;
+            }
+            p {
+                color: black;
+                font-size: 1.8rem;
+                padding: 1rem 3rem;
+                &:last-of-type {
+                    padding: 1rem 3rem 3rem;
+                }
+                
+                svg{
+                    margin-right: 2.4rem;
+                    vertical-align: middle;
+                }
+            }
+        }
+        
+        &-social{
+            text-align: center;
+            width: 50%;
+            align-self: center;
+            margin: auto;
+            h2{
+                color: $darkBlue;
+                font-weight: 400;
+            }
+            .footer__social{
+                margin: auto;
+            }
+        }
+
+    }
+
+
+}

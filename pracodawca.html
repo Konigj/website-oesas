@@ -19,7 +19,7 @@
         <nav class="container container--pall flex flex-jc-sb flex-ai-c">
           <a href="index.html" class="header__logo">
             <img src="assets/logos/LOGO circle.svg" alt="Oportunidad Europa" height="100%">
-            <span>OESAS SP Z O O</span>
+            <span>OESAS SP ZOO</span>
           </a>
   
           <a id="btnHamburger" class="header__toggle hide-for-desktop">
@@ -29,7 +29,10 @@
           </a>
   
           <div class="header__links hide-for-mobile">
-            <a href="#nosotros">Początek</a><a href="#oferta">Oferta</a><a href="#faq">Pytania</a><a href="#kontakt">Kontakt</a>
+            <a href="#nosotros">Początek</a>
+            <!-- <a href="#oferta">Oferta</a> -->
+            <a href="#faq">Pytania</a>
+            <a href="#kontakt">Kontakt</a>
           </div>
 
           <a href="index.html" class="info-button pracodawca header__cta hide-for-mobile">
@@ -39,7 +42,7 @@
   
         <div class="header__menu has-fade">
           <a class="burger-link" href="#nosotros">Początek</a>
-          <a class="burger-link" href="#oferta">Oferta</a>
+          <!-- <a class="burger-link" href="#oferta">Oferta</a> -->
           <a class="burger-link" href="#faq">Pytania</a>
           <a class="burger-link" href="#kontakt">Kontakt</a>
           <a class="burger-link" class="poland-button" href="index.html">
@@ -69,7 +72,7 @@
     
     <section class="hero">
       <div class="container">
-        <div class="hero__image"></div>
+        
         <div class="hero__text container--pall">
           <h1>Po co zatrudniać Latynosów?</h1>
           <p>
@@ -83,15 +86,10 @@
           </p>
           <a href="contacto.html" class="info-button hero__cta">Skontaktuj się ze mną</a>
         </div>
+        <div class="hero__image"></div>
       </div>
     </section>
     <!--  /// END OF Pracodawca/// -->
-
-    <!--  ///  OFERTA EMPLEADOR/// -->
-    <section id="oferta">
-    </section>
-    <!--  /// END OF OFERTA EMPLEADOR/// -->
-
 
     <!--  ///  FAQ EMPLEADOR/// -->
     <section class="empleador faq" id="faq">
@@ -174,6 +172,39 @@
 
      <!--  /// FORMULARIO EMPLEADOR/// -->
     <section id="kontakt">
+      <div class="contact_container">
+        <div class="contact__form ">
+          <p> Czy masz jakieś pytania?</p>
+          <h2>Kontakt Opportunity Europe</h2>
+          <p>Jesteśmy tutaj, aby rozwiać wszelkie Twoje wątpliwości.</p>
+          <div class="form_container">
+            <form action="https://formsubmit.co/info@oesas.pl" method="POST" >
+              <input type="hidden" name="_subject" value="Website message">
+              <input type="hidden" name="_captcha" value="false">
+              <!-- <input type="hidden" name="_next" value="https://oesas.pl"> -->
+              <label class="label" for="name">Nazwa</label>
+              <input class="name" type="text" name="name" placeholder="Jan" required>
+
+              <label class="label" for="lastnaem">Nazwisko</label>
+              <input class="lastname" type="text" name="lastname" placeholder="Kowalski" required>
+
+              <label class="label" for="email">E-mail</label>
+              <input  class="email" type="email" name="email" placeholder="Jan@Kowalski.com" required>
+
+              <textarea class="text" name="message" id="message" cols="30" rows="4" placeholder="Napisz swoją wiadomość" required></textarea>
+
+              <button id="contactBtn" class="submit-button" type="submit">
+                <p id="contactBtnText">Składaćr</p>
+                <div class="check-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                        <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </div>
+            </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section> 
      <!--  /// END OF FORMULARIO EMPLEADOR/// -->
     
@@ -203,15 +234,16 @@
   
           <div class="footer__links col1">
               <a href="#nosotros">Początek</a>
-              <a href="#oferta">Oferta</a>
               <a href="#faq">Pytania</a>
+              <a href="#kontakt">Kontakt</a>
+              <!-- <a href="#oferta">Oferta</a> -->
           </div>
   
           <div class="footer__links col2">
             
-            <a href="#kontakt">Kontakt</a>
             <a href="index.html">Español</a>
             <a href="#">Polityka prywatności</a>
+            <a class='invisible' href="#">Link invisible</a>
           </div>
   
           <div class="footer__cta">

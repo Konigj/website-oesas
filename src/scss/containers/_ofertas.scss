@@ -1,0 +1,125 @@
+.offer{ 
+
+    padding: 5rem 0;
+    background-color: $lightGrayishBlue;
+    list-style-type: none;
+
+    h1{
+        text-align: center;
+        font-weight: 700;
+    }
+
+    &__container{
+        
+        @include breakpoint-up(large) {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            gap: 3rem;
+          }
+
+        &-image{
+            max-width: 50rem;
+            margin: auto;
+            @include breakpoint-down(small) {
+                width: 90%;
+              }
+
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 2rem;
+            }
+
+            
+        }
+        &-text{
+            width: 50%;
+            margin: 3rem auto;
+            text-align: justify;
+            font-size: 1.8rem;
+            color: black;
+            @include breakpoint-down(medium) {
+                width: 80%;
+         
+              }
+
+
+            h2{
+                border-bottom: 1px solid $darkBlue;
+            }
+
+            .job-conditions{
+                display: flex;
+                gap: 3rem;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                
+                p{
+                    font-size: 2.4rem;
+                    margin: 0;
+                    svg {
+                        fill: $darkBlue;
+                    }
+                }
+                
+                margin-bottom: 3rem;
+            }
+            a{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+
+        
+    }
+
+    .offer__container-information{
+        
+
+        @include breakpoint-up(large){
+            display: flex;
+            gap: 5rem;
+            justify-content: center;
+            margin: 3rem;   
+        }
+
+        >div{
+            
+            padding: 4rem;
+            border-radius: 1rem;
+            background-color: white;
+            @include breakpoint-down(medium){
+                margin: 3rem;
+                padding: 2rem;
+                font-size: 1.8rem;  
+            }
+        }
+        h2{
+            font-weight: 700;
+        }
+
+        li {
+            margin: 2rem 0;
+            color: black;
+            
+        }
+
+        svg{
+            margin: 0 2rem 0 0;
+        }
+
+
+        .offer__container-procedure{
+            
+            li{ 
+                &:last-of-type{
+                    font-weight: 700;
+                }
+            }
+            
+
+        }
+    }
+}

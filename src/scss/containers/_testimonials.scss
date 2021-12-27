@@ -1,78 +1,232 @@
 .testimonials {
-    // https://codepen.io/feyinway/pen/LjMPgv
-
     text-align: center;
     background-color: $lightGrayishBlue;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    user-select: none;
 
-    &__containter {
-        position: relative;
+    &__container {
         width: 100%;
-        max-width: 1020px;
-        padding: 40px 20px;
+        padding: 3rem 0rem 7rem;
+        }
+
+    &__content {
         margin: auto;
+        overflow: hidden;
+        position: relative;
+        
 
-        .arrow {
-            svg{
-                display: block;
-                position: absolute;
-                color: #eee;
-                cursor: pointer;
-                font-size: 2em;
-                transition: all .3s ease-in-out;
-                padding: 5px;
-                z-index: 22222222;
+        >div {
+            padding: 0 0 1.8rem 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
 
-                &:before{
-                    cursor: pointer;
+            &.inactive{
+                opacity: 1;
+                .img img{
+                    animation: testimonial-hide .5s ease-in-out forwards;
                 }
 
-                &:hover{
-                    color: orange;
+                h2{
+                    animation: testimonial-content-out .5s ease-in-out forwards;
+                }
+                p {
+                    animation: testimonial-content-out .5s ease-in-out forwards;
                 }
             }
+            &.active{
+                opacity: 1;
+                position: relative;
+                .img img{
+                    animation: testimonial-show .5s ease-in-out forwards;
+                }
+                h2{
+                    animation: testimonial-content-in .5s ease-in-out forwards;
+                }
 
+                p{
+                    animation: testimonial-content-in .5s ease-in-out forwards;
+                }
+            }
+        }
+
+        div {
+            .img img {
+                display: block;
+                width: 15rem;
+                height: 15rem;
+                margin: auto;
+                border-radius: 50%;
+                @include breakpoint-down(small) {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+            h2{
+                color: $darkBlue;
+                font-size: 2.4rem;
+                margin: 1.5rem 0;
+                font-weight: 700;
+            }
+            p {
+                font-size: 1.8rem;
+                color: black;
+                margin: auto;
+                width: 50%;
+                word-spacing: 0.2rem;
             
-            .right {
+            }
+        }
+
+    }
+
+    .arrow {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        
+        top: 50%;
+        transition: all .3s ease-in-out;
+        padding: 1rem;
+        z-index: 22222222;
+        svg{
+            width: 3rem;
+            height: 3rem;
+
+        }
+
+        &:before {
+            cursor: pointer;
+        }
+        &:hover {
+            transform: scale(1.5);
+            transition: all .2s ease-in-out;
+        }
+
+        &.right {
+            right: 5rem;
+            @include breakpoint-up(large) {
+                right: 15rem;
+            }
+            @include breakpoint-down(small) {
                 right: 1rem;
             }
-            .left {
+        }
+        &.left {
+            left: 5rem;
+            @include breakpoint-up(large) {
+                left: 15rem;
+            }
+            @include breakpoint-down(small) {
                 left: 1rem;
             }
         }
+    }
 
-        .dots {
-            text-align: center;
-            position: absolute;
-            width: 100%;
-            bottom: 60px;
-            left: 0;
-            display: block;
-            z-index: 3333;
-            height: 12px;
+    .dots {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        bottom: 4rem;
+        left: 0;
+        display: block;
+        z-index: 3333;
+        height: 1.2rem;
+        margin: auto;
 
-            .dot{
-                list-style-type: none;
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                border: 1px solid #eee;
-                margin: 0 10px;
-                cursor: pointer;
-                -webkit-transition: all .5s ease-in-out;    
-                -ms-transition: all .5s ease-in-out;    
-                -moz-transition: all .5s ease-in-out;    
-                -o-transition: all .5s ease-in-out;    
-                transition: all .5s ease-in-out;
-		        position: relative;
+        .dot{
+            list-style-type: none;
+            display: inline-block;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            border: 1px solid $darkBlue;
+            margin: 0 1rem;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            position: relative;
 
-                &:active, &:hover {
-                    background: #ea830e;
-                    border-color: #ea830e;
-                }
+            &.active, &:hover {
+                background: $darkBlue;
+                border-color: $darkBlue;
+            }
+            &.active {
+                animation: testimonials-scale .5s ease-in-out forwards;
             }
 
         }
 
+    }
+
+
+}
+
+@keyframes testimonial-scale {
+    0% {
+        box-shadow: 0px 0px 0px 0px #eee;
+    }
+
+    35% {
+        box-shadow: 0px 0px 10px 5px #eee;
+    }
+
+    70% {
+        box-shadow: 0px 0px 10px 5px #ea830e;
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 0px #ea830e;
+    }
+}
+
+@keyframes testimonial-content-in {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes testimonial-content-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes testimonial-show {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes testimonial-hide {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0);
     }
 }

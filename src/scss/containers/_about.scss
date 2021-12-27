@@ -1,5 +1,6 @@
 .about {
     margin-bottom: 7rem;
+    user-select: none;
     .about__content {
 
         @include breakpoint-up(large) {
