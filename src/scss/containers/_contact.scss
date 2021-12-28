@@ -24,6 +24,7 @@
             width: 50rem;
             margin: auto;
             border-radius: 1rem;
+            color: black;
 
             @include breakpoint-down (small){
                 width: 90%;
@@ -42,6 +43,7 @@
                 padding: 1rem 3rem;
                 &:last-of-type {
                     padding: 1rem 3rem 3rem;
+                    color: black;
                 }
                 
                 svg{
@@ -65,7 +67,6 @@
             }
             .footer__social{
                 margin: auto;
-                color: black;
             }
         }
 
