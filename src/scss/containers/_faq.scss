@@ -40,6 +40,7 @@
                     border-bottom: 0.2rem solid $darkBlue;
                     margin: 2rem 0;
                     color: $darkBlue;
+                    text-align: start;
 
                     @include breakpoint-down(small){
                         font-size: $font-med;

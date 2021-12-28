@@ -23,6 +23,8 @@
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
+            margin: 0 auto;
 
             &.inactive{
                 opacity: 1;
@@ -128,10 +130,10 @@
 
     .dots {
         text-align: center;
+        padding: 0;
         position: absolute;
         width: 100%;
         bottom: 4rem;
-        left: 0;
         display: block;
         z-index: 3333;
         height: 1.2rem;
