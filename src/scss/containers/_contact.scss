@@ -29,6 +29,11 @@
             @include breakpoint-down (small){
                 width: 90%;
             }
+
+            a[href^="tel"] {
+                color: inherit; 
+                text-decoration: none; 
+              }
             
             
             h3 {
@@ -38,6 +43,8 @@
                 font-size: 2.4rem;
             }
             p {
+
+
                 color: black;
                 font-size: 1.8rem;
                 padding: 1rem 3rem;
