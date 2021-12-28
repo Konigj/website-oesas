@@ -24,6 +24,10 @@
             width: 50rem;
             margin: auto;
             border-radius: 1rem;
+
+            @include breakpoint-down (small){
+                width: 90%;
+            }
             
             
             h3 {
@@ -49,15 +53,19 @@
         
         &-social{
             text-align: center;
-            width: 50%;
+            width: 50rem;
             align-self: center;
             margin: auto;
+            @include breakpoint-down (small){
+                width: 90%;
+            }
             h2{
                 color: $darkBlue;
                 font-weight: 400;
             }
             .footer__social{
                 margin: auto;
+                color: black;
             }
         }
 
