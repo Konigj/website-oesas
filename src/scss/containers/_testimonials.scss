@@ -89,7 +89,6 @@
         display: block;
         position: absolute;
         cursor: pointer;
-        
         top: 50%;
         transition: all .3s ease-in-out;
         padding: 1rem;
@@ -129,15 +128,15 @@
     }
 
     .dots {
-        text-align: center;
         padding: 0;
         position: absolute;
-        width: 100%;
         bottom: 4rem;
         display: block;
         z-index: 3333;
         height: 1.2rem;
         margin: auto;
+        left: 0;
+        right: 0;
 
         .dot{
             list-style-type: none;
