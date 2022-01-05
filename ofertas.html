@@ -55,7 +55,7 @@
       <div class="offer__container">
 
         <div class="offer__container-image">
-          <img src="public/assets/img/worker.webp" width="500" alt="">
+          <img src="public/assets/img/worker.jpg" width="500" alt="">
         </div>
 
         <div class="offer__container-text">
@@ -90,7 +90,7 @@
             <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 12h10v1h-10v-1zm7.816-3h-7.816v1h9.047c-.45-.283-.863-.618-1.231-1zm-7.816-2h6.5c-.134-.32-.237-.656-.319-1h-6.181v1zm13 3.975v2.568c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h9.5c.312-.749.763-1.424 1.316-2h-12.816v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.886c-.623.26-1.297.421-2 .475zm4-6.475c0 2.485-2.015 4.5-4.5 4.5s-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5zm-2.156-.882l-.696-.696-2.116 2.169-.992-.941-.696.697 1.688 1.637 2.812-2.866z"/></svg>
               Contrato de mandato por un año (mínimo)</li>
             <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 12h10v1h-10v-1zm7.816-3h-7.816v1h9.047c-.45-.283-.863-.618-1.231-1zm-7.816-2h6.5c-.134-.32-.237-.656-.319-1h-6.181v1zm13 3.975v2.568c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h9.5c.312-.749.763-1.424 1.316-2h-12.816v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.886c-.623.26-1.297.421-2 .475zm4-6.475c0 2.485-2.015 4.5-4.5 4.5s-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5zm-2.156-.882l-.696-.696-2.116 2.169-.992-.941-.696.697 1.688 1.637 2.812-2.866z"/></svg>
-              Jornada por turnos</li>
+              Jornada por turnos (min. 40 horas semanales)</li>
             <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 12h10v1h-10v-1zm7.816-3h-7.816v1h9.047c-.45-.283-.863-.618-1.231-1zm-7.816-2h6.5c-.134-.32-.237-.656-.319-1h-6.181v1zm13 3.975v2.568c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h9.5c.312-.749.763-1.424 1.316-2h-12.816v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.886c-.623.26-1.297.421-2 .475zm4-6.475c0 2.485-2.015 4.5-4.5 4.5s-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5zm-2.156-.882l-.696-.696-2.116 2.169-.992-.941-.696.697 1.688 1.637 2.812-2.866z"/></svg>
               Pago mensual y en cuenta bancaria</li>
           </ul>
@@ -115,25 +115,40 @@
     <section class="contact" id="contact">
       <div class="contact_container">
         <div class="contact__form">
-          <p> ¿Tienes alguna pregunta?</p>
-          <h2>Contáctate con Oportunidad Europa</h2>
+          <p> ¿Estás interesado?</p>
+          <h2>Aplica a la convocatoria</h2>
           <p>Estamos para solucionar las dudas que puedas tener.</p>
           <div class="form_container">
             <form action="https://formsubmit.co/info@oesas.pl" method="POST" enctype="multipart/form-data" >
               <input type="hidden" name="_subject" value="Website message">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_next" value="https://oesas.netlify.app/gracias">
+
               <label class="label" for="name">Nombre(s)</label>
-              <input class="name" type="text" name="name" placeholder="Carlos" required>
+              <input class="name" size="20" type="text" name="name" placeholder="Carlos" required>
 
               <label class="label" for="lastnaem">Apellidos</label>
-              <input class="lastname" type="text" name="lastname" placeholder="Pérez Pérez" required>
+              <input class="lastname" size="20" type="text" name="lastname" placeholder="Pérez Pérez" required>
+
+              <label class="label" for="nationality">Nacionalidad</label>
+              <input class="nationality" size="20" type="text" name="nationality" placeholder="Colombiano/a" required>
+
+              <label class="label" for="expiration">Año de vencimiento de su pasaporte</label>
+              <input class="expiration" min="2021" max="2031" type="number" name="expiration" placeholder="2021" required>
 
               <label class="label" for="tel">Teléfono de contacto</label>
               <input  class="tel" type="tel" name="tel" placeholder="57 3227341241" maxlength="14" minlength="7" required>
 
               <label class="label" for="email">Correo electrónico</label>
-              <input  class="email" type="email" name="email" placeholder="carlos@pérez.com" required>
+              <input  class="email" size="50" type="email" name="email" placeholder="carlos@gmail.com" required>
+
+              <label class="label" for="education">Nivel Educativo</label>
+              <select name="education" id="education" size="1" required>
+                <option value="bachiller">Bachiller</option>
+                <option value="Técnico">Técnico/Tecnólogo</option>
+                <option value="Profesional">Profesional</option>
+              </select>
+              
 
               <textarea class="text" name="message" id="message" cols="30" rows="4" placeholder="Escribe tu mensaje" required></textarea>
               

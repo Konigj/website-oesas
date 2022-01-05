@@ -19,7 +19,7 @@
                 color: $darkBlue;
                 text-align: start;
             }
-            input, textarea{
+            input, textarea, select{
                 padding: 0.6rem 1.2rem;
                 border: none;
                 border-radius: 1rem;
@@ -118,29 +118,6 @@
                 }
 
             }
-
-            // .active-button{
-            //     background: $redPoland;
-            //     transition: 1s;
-            // }
-
-            // .active-button .check-box{
-            //     right: 0;
-            //     opacity: 1;
-            //     display: inherit;
-            //     transition: 1s;
-            // }
-            
-            // .active-button p{
-            //     margin-right: 125px;
-            //     transition: 1s;
-            // }
-            
-            // .active-button svg path{
-            //     stroke-dashoffset: 0;
-            //     transition: 1s;
-            //     transition-delay: 1s;
-            // }
         }
     }
 

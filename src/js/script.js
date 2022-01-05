@@ -206,15 +206,3 @@ window.onload = function() {
     
   })
 };
-
-
-// CONTACT BUTTON
-        // const contactBtn = document.querySelector('#contactBtn');
-        // const contactBtnText = document.querySelector('#contactBtnText');
-
-        // contactBtn.onclick = () => {
-        //   contactBtnText.innerHTML = "Gracias";
-        //   contactBtn.classList.add("active-button");
-        // };
-
-
