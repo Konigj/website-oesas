@@ -5,16 +5,26 @@
     overflow: hidden;
     margin: auto;
     user-select: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     &__container {
         width: 100%;
         padding: 3rem 0rem 7rem;
+        
+        p{
+            position: relative;
+            margin-top: -1.8rem;
+            text-align: left;
+            top: 0%;
+            padding-left: 1.8rem;
+        }
         }
 
     &__content {
         margin: auto;
         overflow: hidden;
         position: relative;
+        
         
 
         >div {
@@ -62,6 +72,7 @@
                 height: 15rem;
                 margin: auto;
                 border-radius: 50%;
+                filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
                 @include breakpoint-down(small) {
                     width: 10rem;
                     height: 10rem;
@@ -79,6 +90,7 @@
                 margin: auto;
                 width: 50%;
                 word-spacing: 0.2rem;
+                text-align: center;
             
             }
         }

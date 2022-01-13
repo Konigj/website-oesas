@@ -2,6 +2,7 @@
     position: relative;
     z-index: 1;
     user-select: none;
+    
 
     @include breakpoint-down(medium) {
       margin-bottom: 1.6rem;
@@ -46,10 +47,12 @@
     &__logo {
       display: flex;
       align-items: center;
+      
   
       img {
         width: 7rem;
         height: 7rem;
+        filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
       }
   
       span {
